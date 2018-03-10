@@ -5,7 +5,7 @@ if(isset($POST) & !empty($_Post)){
 	$username = $_Post['username'];
 	$password = $_Post['password'];
 
-	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('username', '$password')";
+	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 
 
 }
