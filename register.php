@@ -1,7 +1,9 @@
 
 <?php
 require_once('connection.php');
-print_r($_POST)
+echo $username = $POST['username'];
+echo "<br />";
+echo $password = $POST['password'];
 ?>
 
 <!DOCTYPE html>
