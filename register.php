@@ -2,6 +2,7 @@
 <?php
 require_once('connection.php');
 echo $username = $_Post['username'];
+echo "Test";
 
 
 
