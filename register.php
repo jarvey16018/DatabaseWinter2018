@@ -2,19 +2,14 @@
 <?php
 require_once('connection.php');
 //if(isset($_POST) & !empty($_Post)){
+	
 	$username = $_Post['username'];
-	$username =  'Test';
 	$password = $_Post['inputPassword'];
-	echo $username;
+	//echo $username;
 
 	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
-
-
 //}
-
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
