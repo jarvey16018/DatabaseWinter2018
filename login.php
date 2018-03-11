@@ -17,7 +17,7 @@ if(isset($_POST) & !empty($_POST)){
 	if($count == 1){
 		echo "Create Session";
 	}else{
-		echo "Invalid Username or Password"
+		echo "Invalid Username or Password";
 	}
 
 
