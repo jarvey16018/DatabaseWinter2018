@@ -16,6 +16,8 @@ if(isset($_POST) & !empty($_POST)){
 	$count = mysqli_num_rows($result);
 	if($count == 1){
 		$_SESSION['username'] = $username;
+		header('Location: Hello.php');/* Redirect browser */
+		exit();
 	}else{
 		$fmsg =  "Invalid Username or Password";
 	}
