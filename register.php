@@ -5,8 +5,8 @@ require_once('connection.php');
 if(isset($_POST) & !empty($_POST)){
 	
 	//print_r($_POST);
-	$username = mysqli_real_escape_string($_POST['username']);
-	$password = mysqli_real_escape_string($_POST['password']);
+	$username = $_POST['username'];
+	$password = $_POST['password'];
 	//echo $username;
 
 	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
