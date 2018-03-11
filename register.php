@@ -1,14 +1,14 @@
 
 <?php
-//require_once('connection.php');
+require_once('connection.php');
 //if(isset($_POST) & !empty($_Post)){
 	
-	print_r($_Post);
-	//$username = $_Post['username'];
-	//$password = $_Post['inputPassword'];
+	print_r($_POST);
+	$username = $_POST['username'];
+	$password = $_POST['inputPassword'];
 	//echo $username;
 
-	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
+	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 //}
 ?>
 <!DOCTYPE html>
