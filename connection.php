@@ -2,7 +2,7 @@
 //$link = mysqli_connect("localhost", "root", "Jarvey16018!", "CC");
 
 
-$connection = mysqli_connect("localhost", "root", "Jarvey16018!");
+$connection = mysqli_connect('localhost', 'root', 'Jarvey16018!');
 
 $select_db = mysqli_connect_db($connection, 'login');
 
