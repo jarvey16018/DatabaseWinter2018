@@ -8,7 +8,7 @@ require_once('connection.php');
 	//$password = $_Post['inputPassword'];
 	//echo $username;
 
-	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
+	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 //}
 ?>
 <!DOCTYPE html>
