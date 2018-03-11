@@ -6,7 +6,7 @@ require_once('connection.php');
 	$username = $_Post['username'];
 	$password = $_Post['inputPassword'];
 	//echo $username;
-
+	print_r($_Post);
 	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 //}
 ?>
