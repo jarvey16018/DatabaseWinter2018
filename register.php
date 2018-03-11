@@ -1,7 +1,7 @@
 
 <?php
 require_once('connection.php');
-//if(isset($_POST) & !empty($_Post)){
+if(isset($_POST) & !empty($_POST)){
 	
 	//print_r($_POST);
 	$username = $_POST['username'];
@@ -9,7 +9,7 @@ require_once('connection.php');
 	//echo $username;
 
 	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
-//}
+}
 ?>
 <!DOCTYPE html>
 <html>
