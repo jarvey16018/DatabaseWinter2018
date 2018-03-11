@@ -1,6 +1,6 @@
 
 <?php
-require_once('connection.php');
+//require_once('connection.php');
 //if(isset($_POST) & !empty($_Post)){
 	
 	print_r($_Post);
