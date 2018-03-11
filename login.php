@@ -13,9 +13,8 @@ if(isset($_POST) & !empty($_POST)){
 	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 	$query = "SELECT * FROM 'login' WHERE username= '$username' AND password= '$password'";
 	$result = mysqli_query($connection, $query);
-	$count = mysqli_num_rows($result);
-	echo "Test=";
-	echo($count);
+	echo $mycount = mysqli_num_rows($result);
+
 
 
 	//$count = mysqli_num_rows($result);
