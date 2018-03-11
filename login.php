@@ -17,13 +17,13 @@ if(isset($_POST) & !empty($_POST)){
 	if($count == 1){
 		$_SESSION['username'] = $username;
 	}else{
-		echo "Invalid Username or Password";
+		$fmsg =  "Invalid Username or Password";
 	}
 
 
 }
 if(isset($_SESSION['username'])){
-	echo "User already logged in";
+	$smsg = "User already logged in";
 }
 
 
@@ -44,6 +44,10 @@ if(isset($_SESSION['username'])){
 </head>
 <body>
 	  <div class="container">
+	  	 <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div> 	
+	  	 <?php } ?>
+	  	  <?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div> 	
+	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Please Login</h2>
          <div class="input-group">
