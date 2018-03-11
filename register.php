@@ -9,19 +9,19 @@ if(isset($_POST) & !empty($_POST)){
 	$password = $_POST['password'];
 	//echo $username;
 
-	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
+	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 	$query = "SELECT * FROM 'login' WHERE username = '$username' and password = '$password'";
 
-	$result = mysqli_query($link, $query) or die(mysqli_error($link));
-	$count = mysqli_num_rows($result);
+	//$result = mysqli_query($link, $query) or die(mysqli_error($link));
+	//$count = mysqli_num_rows($result);
 
-	if($count ==1){
-		$SESSION['username'] =b$username;
-	}
-	else
-	{
-		$fmsg = "Invalid Login";
-	}
+	//if($count ==1){
+		//$SESSION['username'] =b$username;
+	//}
+	//else
+	//{
+		//$fmsg = "Invalid Login";
+	//}
 
 }
 ?>
