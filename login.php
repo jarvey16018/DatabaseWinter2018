@@ -11,21 +11,10 @@ if(isset($_POST) & !empty($_POST)){
 	//echo $username;
 
 	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
-	$query = "SELECT * FROM 'login' WHERE username= '$username' AND password= '$password'";
-	$result = mysqli_query($connection, $query);
-	echo $mycount = mysqli_num_rows($result);
+	$query = "SELECT * FROM `user` WHERE username='$username' and password='$password'";
+ 	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+	echo $count = mysqli_num_rows($result);
 
-
-
-	//$count = mysqli_num_rows($result);
-
-	//if($count ==1){
-		//$SESSION['username'] =b$username;
-	//}
-	//else
-	//{
-		//$fmsg = "Invalid Login";
-	//}
 
 }
 ?>
