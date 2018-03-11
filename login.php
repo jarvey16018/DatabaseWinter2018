@@ -1,7 +1,7 @@
 
 
 <?php
-//session_start();
+session_start();
 require_once('connection.php');
 if(isset($_POST) & !empty($_POST)){
 	
@@ -15,13 +15,18 @@ if(isset($_POST) & !empty($_POST)){
  	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 	$count = mysqli_num_rows($result);
 	if($count == 1){
-		echo "Create Session";
+		$_SESSION['username'] = $username;
 	}else{
 		echo "Invalid Username or Password";
 	}
 
 
 }
+if(isset($_SESSION['username'])){
+	echo "User already logged in";
+}
+
+
 ?>
 
 <!DOCTYPE html>
