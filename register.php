@@ -5,14 +5,21 @@ require_once('connection.php');
 if(isset($_POST) & !empty($_POST)){
 	
 	//print_r($_POST);
-	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$username = mysqli_real_escape_string($_POST['username']);
+	$password = mysqli_real_escape_string($_POST['password']);
 	//echo $username;
 
 	echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
 	$query = "SELECT * FROM 'login' WHERE username = '$username' and password = '$password'";
+	$result = mysqli_query($link, $query);
+	if($result){
+		echo "Valid";
+	}else{
+		echo "Failed";
+	}
 
-	//$result = mysqli_query($link, $query) or die(mysqli_error($link));
+
+
 	//$count = mysqli_num_rows($result);
 
 	//if($count ==1){
