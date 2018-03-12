@@ -35,18 +35,14 @@ if(isset($_POST) & !empty($_POST)){
 </head>
 <body>
 	  <div class="container">
-	  	 <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div> 	
-	  	 <?php } ?>
-	  	  <?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div> 	
-	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Add Inventory</h2>
          <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1">Product Name</span>
+	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="productname" class="form-control" placeholder="Product Name" required>
 	     </div>
 	      <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1">Color</span>
+	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="color" class="form-control" placeholder="Color" required>
 	     </div>
 	      <div class="input-group">
