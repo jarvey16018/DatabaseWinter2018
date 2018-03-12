@@ -9,9 +9,11 @@ if (!isset($_SESSION['username'])) {
  }
 
 if(isset($_POST) & !empty($_POST)){
- 	echo $productname = $_POST['productname'];
- 	echo $color = $_POST['color'];
- 	echo $size = $_POST['size'];
+ 	$productname = $_POST['productname'];
+ 	$color = $_POST['color'];
+ 	$size = $_POST['size'];
+
+ 	echo $sql = "INSERT INTO `Product` (name, color, size) VALUES ('$productname', '$color', '$size')";
 }
 
 
@@ -48,7 +50,7 @@ if(isset($_POST) & !empty($_POST)){
 	         <input type="text" name="color" class="form-control" placeholder="Color" required>
 	     </div>
 	      <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1">Size</span>
+	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="size" class="form-control" placeholder="Size" required>
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
