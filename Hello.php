@@ -13,7 +13,13 @@ if(isset($_POST) & !empty($_POST)){
  	$color = $_POST['color'];
  	$size = $_POST['size'];
 
- 	echo $sql = "INSERT INTO `Product` (name, color, size) VALUES ('$productname', '$color', '$size')";
+ 	$sql = "INSERT INTO `Product` (name, color, size) VALUES ('$productname', '$color', '$size')";
+ 	$result2 = mysqli_query($connection2, $sql);
+ 	if($result2){
+ 		echo "Product Added";
+ 	}else{
+ 		echo "Product Not Added";
+ 	}
 }
 
 
