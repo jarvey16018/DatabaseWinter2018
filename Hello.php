@@ -18,7 +18,7 @@ if(isset($_POST) & !empty($_POST)){
  	if($result2){
  		$smsg2 =  "Product Added";
  	}else{
- 		$fmsg2 = echo "Product Not Added";
+ 		$fmsg2 = "Product Not Added";
  	}
 }
 
@@ -41,9 +41,9 @@ if(isset($_POST) & !empty($_POST)){
 </head>
 <body>
 	  <div class="container">
-	  	<?php if(isset($smsg2)){?><div class="alert alert-success" role="alert"> <?php echo $smsg2; ?> </div> 	
+	  	 <?php if(isset($smsg2)){?><div class="alert alert-success" role="alert"> <?php echo $smsg2; ?> </div> 	
 	  	 <?php } ?>
-	  	  <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
+	  	 <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Add Inventory</h2>
