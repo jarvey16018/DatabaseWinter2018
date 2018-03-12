@@ -16,7 +16,7 @@ if(isset($_POST) & !empty($_POST)){
 	$count = mysqli_num_rows($result);
 	if($count == 1){
 		$_SESSION['username'] = $username;
-		header('Location: Hello.php');/* Redirect browser */
+		header('Location: Hello.php');
 		exit();
 	}else{
 		$fmsg =  "Invalid Username or Password";
@@ -59,7 +59,7 @@ if(isset($_SESSION['username'])){
          <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-         <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
+        <!-- <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> -->
          </form>
       <div>
 </body>
