@@ -29,7 +29,7 @@ if (!isset($_SESSION['username'])) {
 	  	  <?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Please Login</h2>
+         <h2 class="form-signin-heading">Add Inventory</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1">@</span>
 	         <input type="text" name="username" class="form-control" placeholder="Username" required>
