@@ -16,9 +16,9 @@ if(isset($_POST) & !empty($_POST)){
  	$sql = "INSERT INTO `Product` (name, color, size) VALUES ('$productname', '$color', '$size')";
  	$result2 = mysqli_query($connection2, $sql);
  	if($result2){
- 		echo "Product Added";
+ 		$smsg2 =  "Product Added";
  	}else{
- 		echo "Product Not Added";
+ 		$fmsg2 = echo "Product Not Added";
  	}
 }
 
@@ -41,6 +41,10 @@ if(isset($_POST) & !empty($_POST)){
 </head>
 <body>
 	  <div class="container">
+	  	<?php if(isset($smsg2)){?><div class="alert alert-success" role="alert"> <?php echo $smsg2; ?> </div> 	
+	  	 <?php } ?>
+	  	  <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
+	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Add Inventory</h2>
          <div class="input-group">
@@ -55,7 +59,7 @@ if(isset($_POST) & !empty($_POST)){
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="size" class="form-control" placeholder="Size" required>
 	     </div>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
          <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
          </form>
       <div>
