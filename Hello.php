@@ -9,9 +9,9 @@ if (!isset($_SESSION['username'])) {
  }
 
 if(isset($_POST) & !empty($_POST)){
- 	$productname = $_POST['productname'];
- 	$color = $_POST['color'];
- 	$size = $_POST['size'];
+ 	$productname = mysqli_real_escape_sting($connection2, $_POST['productname']);
+ 	$color = mysqli_real_escape_sting($connection2, $_POST['color']);
+ 	$size = mysqli_real_escape_sting($connection2, $_POST['size']);
 
  	$sql = "INSERT INTO `Product` (name, color, size) VALUES ('$productname', '$color', '$size')";
  	$result2 = mysqli_query($connection2, $sql);
