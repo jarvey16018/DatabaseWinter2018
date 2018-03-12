@@ -31,7 +31,7 @@ if (!isset($_SESSION['username'])) {
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Add Inventory</h2>
          <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1">@</span>
+	         <span class="input-group-addon" id="basic-addon1">Product Name</span>
 	         <input type="text" name="username" class="form-control" placeholder="Username" required>
 	     </div>
          <label for="inputPassword" class="sr-only">Password</label>
