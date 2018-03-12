@@ -36,7 +36,7 @@ if (!isset($_SESSION['username'])) {
 	     </div>
 	      <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1">Color</span>
-	         <input type="text" name="color" class="form-control" placeholder="Color" required>
+	         <input type="text" name="color" class="form-control" placeholder="Color       " required>
 	     </div>
          <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
