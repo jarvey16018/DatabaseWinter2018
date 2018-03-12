@@ -7,6 +7,14 @@ if (!isset($_SESSION['username'])) {
 	header('Location: login.php');
 
  }
+ print_r($_POST);
+ $productname = $_POST['productname'];
+ $color = $_POST['color'];
+ $size = $_POST['size'];
+
+
+
+
 ?>
 
 <!DOCTYPE html>
