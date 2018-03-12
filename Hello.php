@@ -9,8 +9,8 @@
 //PUT THIS HEADER ON TOP OF EACH UNIQUE PAGE
 
 if (!isset($_SESSION['username'])) {
-header('Location: login.php');
-exit();
+	header('Location: login.php');
+	exit();
 }
 ?>
 
