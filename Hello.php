@@ -8,10 +8,11 @@ if (!isset($_SESSION['username'])) {
 
  }
 
- echo $productname = $_POST['productname'];
- echo $color = $_POST['color'];
- echo $size = $_POST['size'];
-
+if(isset($_POST) & !empty($_POST)){
+ 	echo $productname = $_POST['productname'];
+ 	echo $color = $_POST['color'];
+ 	echo $size = $_POST['size'];
+}
 
 
 
