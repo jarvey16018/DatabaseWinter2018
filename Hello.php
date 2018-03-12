@@ -7,10 +7,10 @@ if (!isset($_SESSION['username'])) {
 	header('Location: login.php');
 
  }
- print_r($_POST);
- $productname = $_POST['productname'];
- $color = $_POST['color'];
- $size = $_POST['size'];
+
+ echo $productname = $_POST['productname'];
+ echo $color = $_POST['color'];
+ echo $size = $_POST['size'];
 
 
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Admin</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
