@@ -125,7 +125,7 @@ if (!$query) {
 			echo '<tr>
 					<td>'.$no.'</td>
 					<td>'.$row['name'].'</td>
-					<td>'.$row['item'].'</td>
+					<td>'.$row['color'].'</td>
 					<td>'. date('F d, Y', strtotime($row['date'])) . '</td>
 					<td>'.$amount.'</td>
 				</tr>';
