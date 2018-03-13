@@ -112,7 +112,6 @@ if (!$query) {
 				<th>Name</th>
 				<th>Color</th>
 				<th>Size</th>
-				<th>AMOUNT</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -128,8 +127,6 @@ if (!$query) {
 					<td>'.$row['color'].'</td>
 					<td>'.$row['size'].'</td>
 				</tr>';
-			$total += $row['amount'];
-			$no++;
 		}?>
 		</tbody>
 		<tfoot>
