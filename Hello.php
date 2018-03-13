@@ -60,6 +60,7 @@ if(isset($_POST) & !empty($_POST)){
 	         <input type="text" name="size" class="form-control" placeholder="Size" required>
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+         <a class="btn btn-lg btn-primary btn-block" href="display.php">View Inventory</a>
          <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
          </form>
       <div>
