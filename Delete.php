@@ -51,6 +51,7 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
          <a class="btn btn-lg btn-primary btn-block" href="Hello.php">Add Inventory</a>
+         <a class="btn btn-lg btn-primary btn-block" href="display.php">View Customers</a>
          <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
          </form>
       <div>
