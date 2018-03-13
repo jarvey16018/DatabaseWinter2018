@@ -109,9 +109,8 @@ if (!$query) {
 	</style>
 </head>
 <body>
-	<h1>Inventory</h1>
+	<h1>Customers</h1>
 	<table class="data-table">
-		<caption class="title">Customers</caption>
 		<thead>
 			<tr>
 				<th>Customer ID</th>
