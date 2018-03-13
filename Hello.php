@@ -174,7 +174,6 @@ if (!$query) {
 <body>
 	<h1>Inventory</h1>
 	<table class="data-table">
-		<caption class="title">Products</caption>
 		<thead>
 			<tr>
 				<th>Product ID</th>
