@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once('connection2.php');
+require_once('connection.php');
 
 if (!isset($_SESSION['username'])) {
 	header('Location: login.php');
@@ -13,7 +13,7 @@ if(isset($_POST) & !empty($_POST)){
  	$size = md5($_POST['password']);
 
  	$sql = "INSERT INTO `login` (username, password) VALUES ('$username', '$password')";
- 	$result2 = mysqli_query($connection2, $sql);
+ 	$result2 = mysqli_query($connection, $sql);
  	if($result2){
  		$smsg2 =  "Product Added";
  	}else{
