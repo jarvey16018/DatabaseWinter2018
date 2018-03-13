@@ -133,7 +133,7 @@ if (!$query) {
 					<td>'.$row['firstName'].'</td>
 					<td>'.$row['lastName'].'</td>
 					<td>'.$row['email'].'</td>
-					<td>'.$row['address'].'</td>
+					<td>'.$row['Address'].'</td>
 				</tr>';
 		}?>
 		</tbody>
