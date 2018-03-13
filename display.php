@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 $db_host = 'localhost'; // Server Name
 $db_user = 'root'; // Username
 $db_pass = 'Jarvey16018!'; // Password
-$db_name = 'Vinyl'; // Database Name
+$db_name = 'Customers'; // Database Name
 
 $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
@@ -16,7 +16,7 @@ if (!$conn) {
 }
 
 $sql = 'SELECT * 
-		FROM Product';
+		FROM Customers';
 		
 $query = mysqli_query($conn, $sql);
 
@@ -111,13 +111,14 @@ if (!$query) {
 <body>
 	<h1>Inventory</h1>
 	<table class="data-table">
-		<caption class="title">Products</caption>
+		<caption class="title">Customers</caption>
 		<thead>
 			<tr>
-				<th>Product ID</th>
-				<th>Name</th>
-				<th>Color</th>
-				<th>Size</th>
+				<th>Customer ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Address</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -128,10 +129,11 @@ if (!$query) {
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
-					<td>'.$row['prodID'].'</td>
-					<td>'.$row['name'].'</td>
-					<td>'.$row['color'].'</td>
-					<td>'.$row['size'].'</td>
+					<td>'.$row['customerID'].'</td>
+					<td>'.$row['firstName'].'</td>
+					<td>'.$row['lastName'].'</td>
+					<td>'.$row['email'].'</td>
+					<td>'.$row['address'].'</td>
 				</tr>';
 		}?>
 		</tbody>
