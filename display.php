@@ -126,8 +126,7 @@ if (!$query) {
 					<td>'.$no.'</td>
 					<td>'.$row['name'].'</td>
 					<td>'.$row['color'].'</td>
-					<td>'. date('F d, Y', strtotime($row['date'])) . '</td>
-					<td>'.$amount.'</td>
+					<td>'.$row['size'].'</td>
 				</tr>';
 			$total += $row['amount'];
 			$no++;
