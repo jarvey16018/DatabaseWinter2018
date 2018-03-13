@@ -7,7 +7,7 @@ if(isset($_POST) & !empty($_POST)){
 	
 	//print_r($_POST);
 	$username = mysqli_real_escape_string($connection, $_POST['username']);
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
 	//echo $username;
 
 	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
