@@ -122,7 +122,7 @@ if (!$query) {
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
-					<td>'.$no.'</td>
+					<td>'.$row['prodID'].'</td>
 					<td>'.$row['name'].'</td>
 					<td>'.$row['color'].'</td>
 					<td>'.$row['size'].'</td>
