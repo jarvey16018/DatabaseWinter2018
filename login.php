@@ -6,7 +6,7 @@ require_once('connection.php');
 if(isset($_POST) & !empty($_POST)){
 	
 	//print_r($_POST);
-	$username = $_POST['username'];
+	$username = mysqli_real_escape_string($connection, $_POST['username']);
 	$password = $_POST['password'];
 	//echo $username;
 
