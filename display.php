@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['username'])) {
+	header('Location: login.php');
+
+ }
+
 $db_host = 'localhost'; // Server Name
 $db_user = 'root'; // Username
 $db_pass = 'Jarvey16018!'; // Password
