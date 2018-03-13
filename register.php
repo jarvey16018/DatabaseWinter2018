@@ -9,15 +9,15 @@ if (!isset($_SESSION['username'])) {
  }
 
 if(isset($_POST) & !empty($_POST)){
- 	$productname = mysqli_real_escape_string($connection, $_POST['username']);
- 	$size = md5($_POST['password']);
+ 	$username = mysqli_real_escape_string($connection, $_POST['username']);
+ 	$password = md5($_POST['password']);
 
  	$sql = "INSERT INTO `login` (username, password) VALUES ('$username', '$password')";
- 	$result2 = mysqli_query($connection, $sql);
- 	if($result2){
- 		$smsg2 =  "Product Added";
+ 	$result3 = mysqli_query($connection, $sql);
+ 	if($result3){
+ 		$smsg3 =  "User Added";
  	}else{
- 		$fmsg2 = "Product Not Added";
+ 		$fmsg3 = "User Not Added";
  	}
 }
 
@@ -40,9 +40,9 @@ if(isset($_POST) & !empty($_POST)){
 </head>
 <body>
 	  <div class="container">
-	  	 <?php if(isset($smsg2)){?><div class="alert alert-success" role="alert"> <?php echo $smsg2; ?> </div> 	
+	  	 <?php if(isset($smsg3)){?><div class="alert alert-success" role="alert"> <?php echo $smsg3; ?> </div> 	
 	  	 <?php } ?>
-	  	 <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
+	  	 <?php if(isset($fmsg3)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg3; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
          <h2 class="form-signin-heading">Add User</h2>
