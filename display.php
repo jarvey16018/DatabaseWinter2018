@@ -129,12 +129,6 @@ if (!$query) {
 				</tr>';
 		}?>
 		</tbody>
-		<tfoot>
-			<tr>
-				<th colspan="4">TOTAL</th>
-				<th><?=number_format($total)?></th>
-			</tr>
-		</tfoot>
 	</table>
 </body>
 </html>
