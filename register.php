@@ -45,7 +45,7 @@ if(isset($_POST) & !empty($_POST)){
 	  	 <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Add Inventory</h2>
+         <h2 class="form-signin-heading">Add User</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="username" class="form-control" placeholder="User Name" required>
@@ -53,10 +53,6 @@ if(isset($_POST) & !empty($_POST)){
 	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-         <a class="btn btn-lg btn-primary btn-block" href="Delete.php">Delete Inventory</a>
-         <a class="btn btn-lg btn-primary btn-block" href="display.php">View Customers</a>
-         <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
          </form>
       <div>
 </body>
