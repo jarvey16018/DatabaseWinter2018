@@ -103,9 +103,9 @@ if (!$query) {
 	</style>
 </head>
 <body>
-	<h1>Table 1</h1>
+	<h1>Inventory</h1>
 	<table class="data-table">
-		<caption class="title">Sales Data of Electronic Division</caption>
+		<caption class="title">Products</caption>
 		<thead>
 			<tr>
 				<th>Product ID</th>
