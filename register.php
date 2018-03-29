@@ -25,7 +25,7 @@ if(isset($_POST) & !empty($_POST)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>
+	<title>Customer</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -42,7 +42,7 @@ if(isset($_POST) & !empty($_POST)){
 	  	 <?php if(isset($fmsg3)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg3; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Add User</h2>
+         <h2 class="form-signin-heading">Customer Account</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="username" class="form-control" placeholder="User Name" required>
