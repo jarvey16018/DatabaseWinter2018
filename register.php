@@ -9,12 +9,12 @@ if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$password = md5($_POST['password']);
 
- 	$sql = "INSERT INTO `login` (username, password) VALUES ('$username', '$password')";
- 	$result3 = mysqli_query($connection, $sql);
- 	if($result3){
- 	 	$smsg3 =  "User Added";
+ 	$sql = "INSERT INTO `Just` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
+ 	$result4 = mysqli_query($connection, $sql);
+ 	if($result4){
+ 	 	$smsg4 =  "User Added";
  	}else{
- 		$fmsg3 = "User Not Added";
+ 		$fmsg4 = "User Not Added";
  	}
 }
 
