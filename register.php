@@ -70,6 +70,7 @@ if(isset($_POST) & !empty($_POST)){
 	         <input type="text" name="Adress" class="form-control" placeholder="Address" required>
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+         <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
          </form>
       <div>
 </body>
