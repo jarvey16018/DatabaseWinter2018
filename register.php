@@ -7,8 +7,12 @@ require_once('connection4.php');
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$password = md5($_POST['password']);
+ 	$firstName = mysqli_real_escape_string($connection, $_POST['firstName']);
+ 	$lastName = mysqli_real_escape_string($connection, $_POST['lastName']);
+ 	$email = mysqli_real_escape_string($connection, $_POST['email']);
+ 	$Address = mysqli_real_escape_string($connection, $_POST['Address']);
 
- 	$sql = "INSERT INTO `login` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address' )";
+ 	$sql = "INSERT INTO `Customers` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
  	$result3 = mysqli_query($connection, $sql);
  	if($result3){
  		$smsg3 =  "User Added";
@@ -50,6 +54,10 @@ if(isset($_POST) & !empty($_POST)){
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
          <label for="inputPassword2" class="sr-only">Confirm Password</label>
          <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Password" required>
+         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+         <input type="text" name="email" class="form-control" placeholder="email" required>
+         <input type="text" name="Address" class="form-control" placeholder="Address" required>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
          <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
          </form>
