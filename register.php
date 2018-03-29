@@ -3,10 +3,6 @@
 session_start();
 require_once('connection.php');
 
-if (!isset($_SESSION['username'])) {
-	header('Location: login.php');
-
- }
 
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
