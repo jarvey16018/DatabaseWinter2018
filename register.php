@@ -1,18 +1,15 @@
 <?php
 
 session_start();
-require_once('connection4.php');
+require_once('connection.php');
+
 
 
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$password = md5($_POST['password']);
- 	$firstName = mysqli_real_escape_string($connection, $_POST['firstName']);
- 	$lastName = mysqli_real_escape_string($connection, $_POST['lastName']);
- 	$email = mysqli_real_escape_string($connection, $_POST['email']);
- 	$Address = mysqli_real_escape_string($connection, $_POST['Address']);
 
- 	$sql = "INSERT INTO `Customers` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
+ 	$sql = "INSERT INTO `login` (username, password) VALUES ('$username', '$password')";
  	$result3 = mysqli_query($connection, $sql);
  	if($result3){
  		$smsg3 =  "User Added";
@@ -42,24 +39,22 @@ if(isset($_POST) & !empty($_POST)){
 	  <div class="container">
 	  	 <?php if(isset($smsg3)){?><div class="alert alert-success" role="alert"> <?php echo $smsg3; ?> </div> 	
 	  	 <?php } ?>
-	  	 <?php if(isset($fmsg3)){?><div class="alert alert-danger" role="alert"`> <?php echo $fmsg3; ?> </div> 	
+	  	 <?php if(isset($fmsg3)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg3; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Customer Login</h2>
+         <h2 class="form-signin-heading">Add User</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="username" class="form-control" placeholder="User Name" required>
 	     </div>
 	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
-         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
-         <input type="text" name="email" class="form-control" placeholder="email" required>
-         <input type="text" name="Address" class="form-control" placeholder="Address" required>
+           <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-         <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
          </form>
       <div>
 </body>
 </html>
-

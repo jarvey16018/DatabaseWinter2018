@@ -49,7 +49,10 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
 	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+           <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
          </form>
       <div>
