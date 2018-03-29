@@ -52,8 +52,6 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
 	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-         <label for="inputPassword2" class="sr-only">Confirm Password</label>
-         <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Password" required>
          <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
          <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
          <input type="text" name="email" class="form-control" placeholder="email" required>
