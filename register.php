@@ -12,7 +12,7 @@ if(isset($_POST) & !empty($_POST)){
  	$sql = "INSERT INTO `login` (username, password) VALUES ('$username', '$password')";
  	$result3 = mysqli_query($connection, $sql);
  	if($result3){
- 		$smsg3 =  "User Added";
+ 	 	$smsg3 =  "User Added";
  	}else{
  		$fmsg3 = "User Not Added";
  	}
@@ -52,6 +52,22 @@ if(isset($_POST) & !empty($_POST)){
            <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="email" class="form-control" placeholder="email" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="Adress" class="form-control" placeholder="Address" required>
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
          </form>
