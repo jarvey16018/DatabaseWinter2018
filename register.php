@@ -59,10 +59,6 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
 	     <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
-	     </div>
-	     <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="email" class="form-control" placeholder="email" required>
 	     </div>
 	     <div class="input-group">
