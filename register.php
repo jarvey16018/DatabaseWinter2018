@@ -68,7 +68,7 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
 	     <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="Adress" class="form-control" placeholder="Address" required>
+	         <input type="text" name="Address" class="form-control" placeholder="Address" required>
 	     </div>
          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button> 
          <!-- <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> -->
