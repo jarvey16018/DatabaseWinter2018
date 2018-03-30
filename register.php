@@ -8,6 +8,11 @@ require_once('Connection4.php');
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$password = md5($_POST['password']);
+ 	$firstName = md5($_POST['firstName']);
+ 	$lastName = md5($_POST['lastName']);
+ 	$email = md5($_POST['email']);
+ 	$Address = md5($_POST['Address']);
+
 
  	$sql = "INSERT INTO `Just` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
  	$result4 = mysqli_query($connection, $sql);
