@@ -14,19 +14,11 @@ if(isset($_POST) & !empty($_POST)){
 	$query = "SELECT * FROM `Just` WHERE username='$username' and password='$password'";
  	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 	$count = mysqli_num_rows($result);
-	if($count == 1){
-		$_SESSION['username'] = $username;
-		header('Location: Hello.php');
-		exit();
-	}else{
-		$fmsg =  "Invalid Username or Password";
-	}
+
 
 
 }
-if(isset($_SESSION['username'])){
-	$smsg = "User already logged in";
-}
+
 
 
 ?>
