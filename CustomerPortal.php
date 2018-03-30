@@ -1,22 +1,26 @@
-
-
 <?php
+
 session_start();
-require_once('connection4.php');
+require_once('Connection4.php');
+
+
+
 if(isset($_POST) & !empty($_POST)){
-	
-	//print_r($_POST);
-	$username = mysqli_real_escape_string($connection, $_POST['username']);
-	$password = md5($_POST['password']);
-	//echo $username;
-
-	//echo $sql = "INSERT INTO 'login' (username, password) VALUES ('$username', '$password')";
-	$query = "SELECT * FROM `Just` WHERE username='$username' and password='$password'";
- 	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-	$count = mysqli_num_rows($result);
+ 	$username = mysqli_real_escape_string($connection, $_POST['username']);
+ 	$password = md5($_POST['password']);
+ 	$firstName = mysqli_real_escape_string($connection, $_POST['firstName']);
+ 	$lastName = mysqli_real_escape_string($connection, $_POST['lastName']);
+ 	$email = mysqli_real_escape_string($connection, $_POST['email']);
+ 	$Address = mysqli_real_escape_string($connection, $_POST['Address']);
 
 
-
+ 	$sql = "INSERT INTO `Just` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
+ 	$result4 = mysqli_query($connection, $sql);
+ 	if($result4){
+ 	 	$smsg4 =  "User Added";
+ 	}else{
+ 		$fmsg4 = "User Not Added";
+ 	}
 }
 
 
@@ -26,7 +30,7 @@ if(isset($_POST) & !empty($_POST)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Customer</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -38,20 +42,36 @@ if(isset($_POST) & !empty($_POST)){
 </head>
 <body>
 	  <div class="container">
-	  	 <?php if(isset($smsg)){?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div> 	
+	  	 <?php if(isset($smsg3)){?><div class="alert alert-success" role="alert"> <?php echo $smsg3; ?> </div> 	
 	  	 <?php } ?>
-	  	  <?php if(isset($fmsg)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div> 	
+	  	 <?php if(isset($fmsg3)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg3; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Please Login</h2>
+         <h2 class="form-signin-heading">Customer Account</h2>
          <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1">@</span>
-	         <input type="text" name="username" class="form-control" placeholder="Username" required>
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="username" class="form-control" placeholder="User Name" required>
 	     </div>
-         <label for="inputPassword" class="sr-only">Password</label>
+	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-        <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> 
+           <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="email" class="form-control" placeholder="email" required>
+	     </div>
+	     <div class="input-group">
+	         <span class="input-group-addon" id="basic-addon1"></span>
+	         <input type="text" name="Address" class="form-control" placeholder="Address" required>
+	     </div>
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button> 
+         <!-- <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> -->
          </form>
       <div>
 </body>
