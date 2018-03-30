@@ -8,19 +8,23 @@ require_once('Connection4.php');
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$password = md5($_POST['password']);
- 	$firstName = mysqli_real_escape_string($connection, $_POST['firstName']);
- 	$lastName = mysqli_real_escape_string($connection, $_POST['lastName']);
- 	$email = mysqli_real_escape_string($connection, $_POST['email']);
- 	$Address = mysqli_real_escape_string($connection, $_POST['Address']);
+ 	
+
+	$query = "SELECT * FROM `login` WHERE username='$username' and password='$password'";
+ 	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
+	$count = mysqli_num_rows($result);
+	if($count == 1){
+		$_SESSION['username'] = $username;
+		header('Location: Hello.php');
+		exit();
+	}else{
+		$fmsg =  "Invalid Username or Password";
+	}
 
 
- 	$sql = "INSERT INTO `Just` (username, password, firstName, lastName, email, Address) VALUES ('$username', '$password', '$firstName', '$lastName', '$email', '$Address')";
- 	$result4 = mysqli_query($connection, $sql);
- 	if($result4){
- 	 	$smsg4 =  "User Added";
- 	}else{
- 		$fmsg4 = "User Not Added";
- 	}
+}
+if(isset($_SESSION['username'])){
+	$smsg = "User already logged in";
 }
 
 
@@ -54,24 +58,9 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
 	      <label for="inputPassword" class="sr-only">Password</label>
          <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-           <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
-	     </div>
-	     <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
-	     </div>
-	     <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="email" class="form-control" placeholder="email" required>
-	     </div>
-	     <div class="input-group">
-	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="Address" class="form-control" placeholder="Address" required>
-	     </div>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button> 
-         <!-- <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> -->
+         
+         <button class="btn btn-lg btn-primary btn-block" type="submit">login</button> 
+          <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> 
          </form>
       <div>
 </body>
