@@ -10,7 +10,7 @@ if(isset($_POST) & !empty($_POST)){
  	$password = md5($_POST['password']);
  	
 
-	$query = "SELECT * FROM `login` WHERE username='$username' and password='$password'";
+	$query = "SELECT * FROM `Just` WHERE username='$username' and password='$password'";
  	$result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 	$count = mysqli_num_rows($result);
 	if($count == 1){
