@@ -44,7 +44,7 @@ if(isset($_POST) & !empty($_POST)){
 	  	 <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Create Order</h2>
+         <h2 class="form-signin-heading">Create Your Custom Order</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="username" class="form-control" placeholder="Username" required>
