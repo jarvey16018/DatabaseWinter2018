@@ -11,8 +11,8 @@ if(isset($_POST) & !empty($_POST)){
  	$color = mysqli_real_escape_string($connection, $_POST['color']);
  	$size = mysqli_real_escape_string($connection, $_POST['size']);
 
- 	$sql = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $productname', '$color', '$size')";
- 	$result2 = mysqli_query($Connection4, $sql);
+ 	$sql = "INSERT INTO `orders` (username, productname, color, size) VALUES ('$username', $productname', '$color', '$size')";
+ 	$result2 = mysqli_query($connection, $sql);
  	if($result2){
  		$smsg2 =  "Product Added to your order";
  	}else{
@@ -27,7 +27,7 @@ if(isset($_POST) & !empty($_POST)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin</title>
+	<title>ORDER</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -44,7 +44,7 @@ if(isset($_POST) & !empty($_POST)){
 	  	 <?php if(isset($fmsg2)){?><div class="alert alert-danger" role="alert"> <?php echo $fmsg2; ?> </div> 	
 	  	 <?php } ?>
      	 <form class="form-signin" method="POST">
-         <h2 class="form-signin-heading">Add Inventory</h2>
+         <h2 class="form-signin-heading">Create Order</h2>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
 	         <input type="text" name="username" class="form-control" placeholder="Username" required>
