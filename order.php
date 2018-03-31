@@ -7,11 +7,11 @@ require_once('Connection4.php');
 
 if(isset($_POST) & !empty($_POST)){
  	$username = mysqli_real_escape_string($connection, $_POST['username']);
- 	$productname = mysqli_real_escape_string($connection, $_POST['productname']);
+ 	$name = mysqli_real_escape_string($connection, $_POST['name']);
  	$color = mysqli_real_escape_string($connection, $_POST['color']);
  	$size = mysqli_real_escape_string($connection, $_POST['size']);
 
- 	$sql = "INSERT INTO `orders` (username, productname, color, size) VALUES ('$username', $productname', '$color', '$size')";
+ 	$sql = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $name', '$color', '$size')";
  	$result2 = mysqli_query($connection, $sql);
  	if($result2){
  		$smsg2 =  "Product Added to your order";
@@ -51,7 +51,7 @@ if(isset($_POST) & !empty($_POST)){
 	     </div>
          <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
-	         <input type="text" name="productname" class="form-control" placeholder="Product Name" required>
+	         <input type="text" name="name" class="form-control" placeholder="Product Name" required>
 	     </div>
 	      <div class="input-group">
 	         <span class="input-group-addon" id="basic-addon1"></span>
