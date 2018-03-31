@@ -6,9 +6,10 @@ require_once('Connection4.php');
 
 
 if(isset($_POST) & !empty($_POST)){
- 	$productname = mysqli_real_escape_string($connection2, $_POST['productname']);
- 	$color = mysqli_real_escape_string($connection2, $_POST['color']);
- 	$size = mysqli_real_escape_string($connection2, $_POST['size']);
+ 	$productname = mysqli_real_escape_string($connection, $_POST['username']);
+ 	$productname = mysqli_real_escape_string($connection, $_POST['productname']);
+ 	$color = mysqli_real_escape_string($connection, $_POST['color']);
+ 	$size = mysqli_real_escape_string($connection, $_POST['size']);
 
  	$sql = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $productname', '$color', '$size')";
  	$result2 = mysqli_query($Connection4, $sql);
