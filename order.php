@@ -12,7 +12,6 @@ if(isset($_POST) & !empty($_POST)){
  	$size = mysqli_real_escape_string($connection5, $_POST['size']);
 
  	$sql5 = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $name', '$color', '$size')";
- 	echo $sql5;
  	$result5 = mysqli_query($connection5, $sql5);
  	if($result5){
  		$smsg5 =  "Product Added to your order";
