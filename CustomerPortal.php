@@ -61,7 +61,7 @@ if(isset($_SESSION['username'])){
          
          <button class="btn btn-lg btn-primary btn-block" type="submit">login</button> 
           <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a> 
-          <a class="btn btn-lg btn-primary btn-block" href="node-page copy/index.html">Rate us</a> 
+          <a class="btn btn-lg btn-primary btn-block" href="node-page/index.html">Rate us</a> 
          </form>
       <div>
 </body>
