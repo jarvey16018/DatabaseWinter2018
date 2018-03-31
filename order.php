@@ -11,7 +11,7 @@ if(isset($_POST) & !empty($_POST)){
  	$size = mysqli_real_escape_string($connection2, $_POST['size']);
 
  	$sql = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $productname', '$color', '$size')";
- 	$result2 = mysqli_query($connection2, $sql);
+ 	$result2 = mysqli_query($Connection4, $sql);
  	if($result2){
  		$smsg2 =  "Product Added to your order";
  	}else{
