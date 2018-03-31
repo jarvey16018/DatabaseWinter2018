@@ -6,7 +6,7 @@ require_once('Connection4.php');
 
 
 if(isset($_POST) & !empty($_POST)){
- 	$productname = mysqli_real_escape_string($connection, $_POST['username']);
+ 	$username = mysqli_real_escape_string($connection, $_POST['username']);
  	$productname = mysqli_real_escape_string($connection, $_POST['productname']);
  	$color = mysqli_real_escape_string($connection, $_POST['color']);
  	$size = mysqli_real_escape_string($connection, $_POST['size']);
