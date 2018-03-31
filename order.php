@@ -6,17 +6,18 @@ require_once('connection5.php');
 
 
 if(isset($_POST) & !empty($_POST)){
- 	$username = mysqli_real_escape_string($connection, $_POST['username']);
- 	$name = mysqli_real_escape_string($connection, $_POST['name']);
- 	$color = mysqli_real_escape_string($connection, $_POST['color']);
- 	$size = mysqli_real_escape_string($connection, $_POST['size']);
+ 	$username = mysqli_real_escape_string($connection5, $_POST['username']);
+ 	$name = mysqli_real_escape_string($connection5, $_POST['name']);
+ 	$color = mysqli_real_escape_string($connection5, $_POST['color']);
+ 	$size = mysqli_real_escape_string($connection5, $_POST['size']);
 
- 	$sql = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $name', '$color', '$size')";
- 	$result2 = mysqli_query($connection, $sql);
- 	if($result2){
- 		$smsg2 =  "Product Added to your order";
+ 	$sql5 = "INSERT INTO `orders` (username, name, color, size) VALUES ('$username', $name', '$color', '$size')";
+ 	echo $sql5;
+ 	$result5 = mysqli_query($connection5, $sql5);
+ 	if($result5){
+ 		$smsg5 =  "Product Added to your order";
  	}else{
- 		$fmsg2 = "Product Not Added to your order";
+ 		$fmsg5 = "Product Not Added to your order";
  	}
 }
 
