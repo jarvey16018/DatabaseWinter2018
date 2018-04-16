@@ -16,7 +16,7 @@ BACKUP_PATH = '/var/www/DatabaseWinter2018/backup'
 # Getting current datetime to create seprate backup folder like "12012013-071334".
 DATETIME = time.strftime('%m%d%Y-%H%M%S')
 
-TODAYBACKUPPATH = BACKUP_PATH + DATETIME
+TODAYBACKUPPATH = BACKUP_PATH
 
 # Checking if backup folder already exists or not. If not exists will create it.
 print "creating backup folder"
