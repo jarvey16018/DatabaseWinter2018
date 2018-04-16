@@ -11,7 +11,7 @@ DB_USER = 'root'
 DB_USER_PASSWORD = 'Jarvey16018!'
 #DB_NAME = '/backup/dbnames.txt'
 DB_NAME = 'CC'
-BACKUP_PATH = '/backup/dbbackup/'
+BACKUP_PATH = '/var/www/DatabaseWinter2018/backup'
 
 # Getting current datetime to create seprate backup folder like "12012013-071334".
 DATETIME = time.strftime('%m%d%Y-%H%M%S')
