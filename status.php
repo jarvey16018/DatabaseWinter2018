@@ -1,5 +1,7 @@
 <?php
-$link   = mysql_connect('localhost', 'root', 'Jarvey16018!');
-$status = explode('  ', mysql_stat($link));
-print_r($status);
+    mysql_connect("localhost", "root", "Jarvey16018!");
+    $array = explode("  ", mysql_stat());
+    foreach ($array as $value){
+        echo $value . "<br />";
+    }
 ?>
