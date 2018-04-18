@@ -63,6 +63,7 @@ if(isset($_POST) & !empty($_POST)){
          <a class="btn btn-lg btn-primary btn-block" href="Delete.php">Delete Inventory</a>
          <a class="btn btn-lg btn-primary btn-block" href="display.php">View Customers</a>
          <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
+         <a class="btn btn-lg btn-primary btn-block" href="backupage.php">Backups and Stats</a>
          </form>
       <div>
 </body>

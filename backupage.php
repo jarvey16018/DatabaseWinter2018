@@ -11,7 +11,7 @@ if (!isset($_SESSION['username'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Backups-stats</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
