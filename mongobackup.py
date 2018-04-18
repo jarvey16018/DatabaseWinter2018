@@ -1,53 +1,17 @@
-import datetime
-import shutil
 import os
-import subprocess
-import zipfile
-
-
-__author__ = 'Matt Swain'
-__email__ = 'm.swain@me.com'
-__version__ = '1.0'
-__license__ = 'BSD'
-
-
-db = 'ratings'
-collections = ['users']
-backup_path = '/var/www/DatabaseWinter2018/backup/'
-mongoexport_path = '/opt/local/bin/mongoexport'
-mongoimport_path = '/opt/local/bin/mongoimport'
-max_backups = 10
-
-def compare_zips(file1, file2):
-    """ Compare the CRC of the first file in each zip. """
-    try:
-        z1 = zipfile.ZipFile(file1)
-        z2 = zipfile.ZipFile(file2)
-    except IOError:
-        return False
-    crc1 = z1.getinfo(z1.namelist()[0]).CRC
-    crc2 = z2.getinfo(z2.namelist()[0]).CRC
-    return crc1 == crc2
-
-def run_backup():
-    """ Export each collection to a file, hard link duplicates and delete old backups """
-
-    # Set up new backup folder
-    now = datetime.datetime.today().strftime('%Y%m%d-%H%M%S')
-    this_backup = os.path.join(backup_path, now)
-    os.mkdir(this_backup)
-    print('Created new backup: %s' % this_backup)
-
-    # Save compressed collections to folder
-    for collection in collections:
-        print('mongoexport: %s' % collection)
-        filepath = os.path.join(this_backup, collection)
-        subprocess.call([mongoexport_path, '--db', db, '--collection', collection, '--out', filepath+'.json'], shell=True)
-        with zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED, True) as myzip:
-            myzip.write(filepath+'.json',collection+'.json')
-        os.remove(filepath+'.json')
-
-   
-
-if __name__ == '__main__':
-    run_backup()
+import os.path
+import shutil
+import fnmatch
+list_of_dirs_to_copy = ['/var/lib/mongodb'] # List of source dirs
+dest_dir = '/var/www/DatabaseWinter2018/backups'     # folder for the destination of the copy
+files_patterns = ['*.txt', '*.doc']
+for root_path in list_of_dirs_to_copy:
+    for root, dirs, files in os.walk(root_path): # recurse walking
+        for dir in excluded_subdirs:
+            if dir in dirs:
+                dirs.remove(dir)   # remove the dir from the subdirs to visit
+        if not os.path.exists(dest_dir):
+            os.makedirs(dest_dir)  # create the dir if not exists
+        for pattern in files_patterns:
+            for thefile in fnmatch.filter(files, pattern):  # filter the files to copy
+                shutil.copy2(os.path.join(root, thefile), dest_dir) #copy file
