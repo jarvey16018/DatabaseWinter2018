@@ -42,7 +42,7 @@ def run_backup():
     for collection in collections:
         print('mongoexport: %s' % collection)
         filepath = os.path.join(this_backup, collection)
-        subprocess.call([mongoexport_path, '--db', db, '--collection', collection, '--out', filepath+'.json'])
+        subprocess.call([mongoexport_path, '--db', db, '--collection', collection, '--out', filepath+'.json'], shell=True)
         with zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED, True) as myzip:
             myzip.write(filepath+'.json',collection+'.json')
         os.remove(filepath+'.json')
