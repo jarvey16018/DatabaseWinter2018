@@ -64,7 +64,7 @@ if(isset($_POST) & !empty($_POST)){
          <a class="btn btn-lg btn-primary btn-block" href="display.php">View Customers</a>
          <a class="btn btn-lg btn-primary btn-block" href="logout.php">Logout</a>
          <a class="btn btn-lg btn-primary btn-block" href="backupage.php">Backups and Stats</a>
-          <a class="btn btn-lg btn-primary btn-block" href="http://192.168.50.27:9200/_cat/indices?v">View Shakespeare Quotes info for Future Products</a>
+          <a class="btn btn-lg btn-primary btn-block" href="http://192.168.50.27:9200/_cat/indices?v">Future Products Data</a>
          </form>
       <div>
 </body>
