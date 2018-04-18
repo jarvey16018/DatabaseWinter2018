@@ -1,0 +1,1 @@
+connections_dict = db.command("serverStatus")["connections"]
