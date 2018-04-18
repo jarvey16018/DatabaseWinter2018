@@ -1,1 +1,2 @@
-connections_dict = db.command("serverStatus")["connections"]
+import os
+os.system("pgrep mongo")
