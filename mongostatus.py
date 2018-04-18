@@ -1,1 +1,1 @@
-connections_dict = db.command("serverStatus")["connections"]
+connections_dict = ratings.command("serverStatus")["connections"]
