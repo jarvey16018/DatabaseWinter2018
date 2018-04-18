@@ -35,13 +35,13 @@ def run_backup():
     # Set up new backup folder
     now = datetime.datetime.today().strftime('%Y%m%d-%H%M%S')
     this_backup = os.path.join(backup_path, now)
-    os.mkdir(backup_path)
-    print('Created new backup: %s' % backup_path)
+    os.mkdir(this_backup)
+    print('Created new backup: %s' % this_backup)
 
     # Save compressed collections to folder
     for collection in collections:
         print('mongoexport: %s' % collection)
-        filepath = os.path.join(backup_path, collection)
+        filepath = os.path.join(this_backup, collection)
         subprocess.call([mongoexport_path, '--db', db, '--collection', collection, '--out', filepath+'.json'], shell=True)
         with zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED, True) as myzip:
             myzip.write(filepath+'.json',collection+'.json')
