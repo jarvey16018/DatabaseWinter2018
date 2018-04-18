@@ -13,7 +13,7 @@ __license__ = 'BSD'
 
 db = 'ratings'
 collections = ['users']
-backup_path = '/var/www/DatabaseWinter2018/backups/'
+backup_path = '/var/www/DatabaseWinter2018/backup/'
 mongoexport_path = '/opt/local/bin/mongoexport'
 mongoimport_path = '/opt/local/bin/mongoimport'
 max_backups = 10
