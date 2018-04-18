@@ -1,3 +1,3 @@
 <?php
-  exec('sudo bash eleasticbackup.sh');
+  exec_shell('sudo bash eleasticbackup.sh');
 ?>

@@ -1,2 +1,4 @@
-import os
-os.system("pgrep mongo")
+
+<?php
+ echo exec('ps aux | grep mongo');
+?>
